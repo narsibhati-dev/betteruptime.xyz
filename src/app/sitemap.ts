@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = getBlogPosts().map((post) => ({
-    url: `${siteUrl}/blog/${post.slug}`,
+    url: `${siteUrl}/blogs/${post.slug}`,
     lastModified: post.metadata?.publishedAt
       ? new Date(post.metadata.publishedAt).toISOString()
       : currentDate,
